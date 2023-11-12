@@ -55,7 +55,7 @@
         <ul>
             <li><a class='chapter' href='/kalli/capitulo1'>Capítulo 1</a></li>
             <li><a class='chapter' href='/kalli/capitulo2'>Capítulo 2</a></li>
-            <li><a href="capitulo3.html" class="chapter">Capítulo 3</a></li>
+            <li><a class='chapter' href='/kalli/capitulo3'>Capítulo 3</a></li>
             <li><a class='chapter' href='/kalli/capitulo12'>Capítulo 12</a></li>
             <!-- Adicione mais capítulos conforme necessário -->
           </ul>
@@ -65,16 +65,16 @@
 
 
         <script>
-            // Carrega os capítulos lidos do localStorage
-            const chaptersRead = JSON.parse(localStorage.getItem('chaptersRead')) || [];
+// Carrega os capítulos lidos do localStorage
+const chaptersRead = JSON.parse(localStorage.getItem('chaptersRead')) || [];
 
-            // Marca como lido os capítulos salvos no localStorage
-            chaptersRead.forEach(chapterNumber => {
-                const chapterLink = document.querySelector(`.chapter[href='/kalli/capitulo${chapterNumber}']`);
-                if (chapterLink) {
-                    chapterLink.parentElement.classList.add('visited');
-                }
-            });
+// Marca como lido os capítulos salvos no localStorage
+chaptersRead.forEach(chapterNumber => {
+    const chapterLink = document.querySelector(`.chapter[href='/kalli/capitulo${chapterNumber}']`);
+    if (chapterLink) {
+        chapterLink.classList.add('visited');
+    }
+});
 
 // Adiciona eventos de clique para marcar como lido
 const chapters = document.querySelectorAll('.chapter');
@@ -86,6 +86,18 @@ chapters.forEach(chapter => {
         saveChapterToStorage(chapterNumber); // Salva o capítulo no localStorage
     });
 });
+
+// Salva os capítulos lidos no localStorage antes de descarregar a página
+window.addEventListener('beforeunload', () => {
+    localStorage.setItem('chaptersRead', JSON.stringify(chaptersRead));
+});
+
+function saveChapterToStorage(chapterNumber) {
+    if (!chaptersRead.includes(chapterNumber)) {
+        chaptersRead.push(chapterNumber);
+    }
+}
+
 
         </script>
     </section>
