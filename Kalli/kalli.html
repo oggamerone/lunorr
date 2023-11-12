@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Kalli the champion</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <a href='/' id='btn-voltar'>Home</a>
+        <h1>Kalli the champion</h1>
+    </header>
+
+    <section id="obra-info">
+        <div class="obra-details">
+            <img src="https://img.lermanga.org/K/kalli-the-champion/capa.jpg" id="capa" alt="Capa da Obra">
+        </div>
+        <div class="obra-details">
+            <h2>Kalli the champion</h2>
+            <P>Após desistir de seu sonho como boxeador, Park Kang-tae ingressou em uma gangue. Ele era muito conhecido dentro da gangue, mas acabou sendo morto no final. Ele tinha um arrependimento quando morreu — ter desistido de seu sonho como boxeador. Será que Deus sabia desse arrependimento? Em um mundo onde o boxe existe na forma de jogos pugilistas, Park Kang-tae busca seu sonho não realizado.
+                
+
+            </P>
+            <table>
+              <tr>
+                <td>Ano:</td>
+                <td>2023</td>
+              </tr>
+              <tr>
+                <td>Tipo:</td>
+                <td>Manhwa</td>
+              </tr>
+              <tr>
+                <td>Gêneros:</td>
+                <td>Ação, Aventura, Comédia</td>
+              </tr>
+              <tr>
+                <td>Outras opções:</td>
+                <td>
+                  <a href="https://slimeread.com/manga/3314/kalli-the-champion">Slimeread</a>
+                  <span>,</span>
+                  <a href="https://lermanga.org/mangas/kalli-the-champion/">LerManga</a>
+                </td>
+              </tr>
+              </tr>
+            </table>
+          </div>
+          
+            
+    </section>
+
+    <section id="capitulos">
+        <h2>Capítulos</h2>
+        <ul>
+            <li><a class='chapter' href='/kalli/capitulo1'>Capítulo 1</a></li>
+            <li><a class='chapter' href='/kalli/capitulo2'>Capítulo 2</a></li>
+            <li><a href="capitulo3.html" class="chapter">Capítulo 3</a></li>
+            <li><a class='chapter' href='/kalli/capitulo12'>Capítulo 12</a></li>
+            <!-- Adicione mais capítulos conforme necessário -->
+          </ul>
+
+
+
+
+
+        <script>
+            // Carrega os capítulos lidos do localStorage
+            const chaptersRead = JSON.parse(localStorage.getItem('chaptersRead')) || [];
+
+            // Marca como lido os capítulos salvos no localStorage
+            chaptersRead.forEach(chapterNumber => {
+                const chapterLink = document.querySelector(`.chapter[href='/kalli/capitulo${chapterNumber}']`);
+                if (chapterLink) {
+                    chapterLink.parentElement.classList.add('visited');
+                }
+            });
+
+// Adiciona eventos de clique para marcar como lido
+const chapters = document.querySelectorAll('.chapter');
+
+chapters.forEach(chapter => {
+    chapter.addEventListener('click', () => {
+        const chapterNumber = parseInt(chapter.textContent.match(/\d+/)[0]); // Extrai o número do capítulo
+        chapter.classList.add('visited'); // Adiciona a classe de capítulo lido diretamente ao link
+        saveChapterToStorage(chapterNumber); // Salva o capítulo no localStorage
+    });
+});
+
+        </script>
+    </section>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,230 @@
+/* Estilos gerais */
+body {
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  a {
+    color: #fff;
+  }
+  
+  a:hover {
+    color: #ffdb58;
+  }
+
+  header {
+    background-color: #1e1e1e;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-size: 28px;
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav a {
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffdb58;
+}
+
+  
+  nav a:hover {
+    color: #ffdb58;
+  }
+  
+  section {
+    padding: 40px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-top: 0;
+  }
+  
+  #search-form {
+    display: flex;
+  }
+  
+  #search-input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+  }
+  
+  #search-input::placeholder {
+    color: #aaa;
+  }
+  
+  #search-form button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  #search-form button:hover {
+    color: #ffdb58;
+  }
+  
+  .obras-recentes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  
+  .obra {
+    float: left;
+    margin: 10px;
+    text-align: center;
+    background-color: #444;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+    width: 200px;
+    height: 400px;
+}
+  
+  .obra h3 {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  .obra h2 {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
+  
+  .obra a {
+    display: block;
+  }
+  
+  .obra img {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s;
+  }
+  
+/* Adicionado estilo para obra em hover */
+.obra:hover {
+    background-color: #555;
+    transform: scale(1.10); /* Aumenta a escala em 10% */
+}
+
+.obra a:hover {
+    color: #ff6600;
+}
+
+
+#obras-populares {
+  margin: 20px;
+}
+
+#obras-populares h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#lista-obras-populares {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#lista-obras-populares li {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #e8e8e8;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+#lista-obras-populares li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+}
+
+#lista-obras-populares li img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px 5px 0 0;
+}
+
+#lista-obras-populares li .title {
+  font-size: 16px;
+  text-align: center;
+  margin: 10px;
+  color: #f0f0f0;
+}
+
+#lista-obras-populares li .views {
+  font-size: 15px;
+  text-align: center;
+  color: #ff0000;
+  margin-bottom: 10px;
+}
+.hidden {
+  display: none !important;
+}
+
+.discord {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.discord img {
+  max-width: 100px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.discord a {
+  color: #fff;
+  font-weight: bold;
+  font-size: 24px;
+  text-decoration: none;
+  border: 2px solid #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.discord a:hover {
+  background-color: #fff;
+  color: #222;
+  border-color: #fff;
+}
