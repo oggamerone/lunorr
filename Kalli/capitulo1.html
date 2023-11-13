@@ -77,14 +77,20 @@
             padding: 15px 20px;
         }
 
+        #chapterInfo {
+            font-size: 16px;
+            color: #4caf50;
+            margin-right: 20px;
+        }
+
         #chapterSelect {
             padding: 10px;
             font-size: 16px;
-            margin-right: 20px;
             border: none;
             border-radius: 5px;
             background-color: #333;
             color: #fff;
+            margin-top: 10px;
         }
 
         #chapterSelect:focus {
@@ -142,25 +148,12 @@
             background-color: #333;
         }
 
-        /* Adicionado estilo para o menu responsivo */
-        #mobileMenu {
-            display: none;
-            position: fixed;
-            top: 0;
-            right: 0;
-            background-color: #111;
-            padding: 15px;
-            z-index: 1001;
-            border-radius: 0 0 0 10px;
-            box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2);
-        }
-
         #menuToggle {
             display: none;
             position: fixed;
             top: 15px;
             right: 15px;
-            font-size: 20px;
+            font-size: 25px;
             color: #4caf50;
             cursor: pointer;
             z-index: 1002;
@@ -168,6 +161,18 @@
 
         #menuToggle:hover {
             color: #fff;
+        }
+
+        #mobileMenu {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: #111;
+            padding: 0 20px 20px;
+            z-index: 1001;
+            border-radius: 0 0 0 10px;
+            box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2);
         }
 
         #mobileMenu a {
@@ -178,6 +183,13 @@
             font-size: 16px;
             font-weight: bold;
             transition: color 0.3s ease;
+            border-bottom: 1px solid #4caf50;
+            padding-bottom: 5px;
+        }
+
+        #mobileMenu a:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
         }
 
         #mobileMenu a:hover {
@@ -185,7 +197,7 @@
         }
 
         @media screen and (max-width: 600px) {
-            header a {
+            #navigation {
                 display: none;
             }
 
@@ -193,28 +205,13 @@
                 display: block;
             }
 
-            #navigation {
-                display: none;
-            }
-
-            #mobileMenu {
-                display: block;
+            main {
+                padding-top: 60px;
             }
         }
     </style>
 </head>
 <body>
-
-    <!-- Adicionado menu responsivo para dispositivos móveis -->
-    <div id="menuToggle" onclick="toggleMobileMenu()">☰</div>
-
-    <div id="mobileMenu">
-        <a href="#">Escolher Capítulo</a>
-        <a href="#" onclick="irParaProximoCapitulo()">Próximo Capítulo</a>
-        <a href="#">Voltar para o Mangá</a>
-        <a href="#" onclick="esconderBarraProgresso()">Esconder Barra de Progresso</a>
-        <a href="#" onclick="reiniciarPagina()">Reiniciar Página</a>
-    </div>
 
     <header id="pageHeader">
         <div id="navigation">
@@ -228,8 +225,9 @@
                 <a href="#" onclick="irParaCapituloAnterior()">Capítulo Anterior</a>
                 <a href="#" onclick="irParaProximoCapitulo()">Próximo Capítulo</a>
             </div>
+            
+            <div id="chapterInfo">Capítulo Atual: 1</div>
         </div>
-        
     </header>
 
     <main>
@@ -242,6 +240,20 @@
         <div id="progress"></div>
     </div>
 
+    <div id="backToManga">
+        <a href="#">Proximo Capítulo</a>
+    </div>
+
+    <div id="menuToggle" onclick="toggleMobileMenu()">☰</div>
+
+    <div id="mobileMenu">
+        <a href="#" onclick="irParaCapituloMobile()">Escolher Capítulo</a>
+        <a href="#" onclick="irParaProximoCapitulo()">Próximo Capítulo</a>
+        <a href="#">Voltar para o Mangá</a>
+        <a href="#" onclick="esconderBarraProgresso()">Esconder Barra de Progresso</a>
+        <a href="#" onclick="reiniciarPagina()">Reiniciar Página</a>
+    </div>
+
     <script>
         var prevScrollpos = window.pageYOffset;
 
@@ -251,7 +263,7 @@
             if (prevScrollpos > currentScrollPos) {
                 document.getElementById("pageHeader").style.top = "0";
             } else {
-                document.getElementById("pageHeader").style.top = "-80px"; // Altura do cabeçalho + 10px de margem
+                document.getElementById("pageHeader").style.top = "-80px";
             }
 
             prevScrollpos = currentScrollPos;
@@ -277,14 +289,19 @@
 
         function irParaCapituloAnterior() {
             var capituloAtual = "capitulo1.html";
-            var capituloAnterior = "capitulo_anterior.html"; // Substitua pelo valor real
+            var capituloAnterior = "capitulo_anterior.html";
             window.location.href = capituloAnterior;
         }
 
         function irParaProximoCapitulo() {
             var capituloAtual = "capitulo1.html";
-            var proximoCapitulo = "proximo_capitulo.html"; // Substitua pelo valor real
+            var proximoCapitulo = "proximo_capitulo.html";
             window.location.href = proximoCapitulo;
+        }
+
+        function irParaCapituloMobile() {
+            var selectedChapter = document.getElementById("chapterSelectMobile").value;
+            window.location.href = selectedChapter;
         }
 
         function esconderBarraProgresso() {
