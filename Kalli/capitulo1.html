@@ -151,6 +151,23 @@
             background-color: #111;
             padding: 15px;
             z-index: 1001;
+            border-radius: 0 0 0 10px;
+            box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #menuToggle {
+            display: none;
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            font-size: 20px;
+            color: #4caf50;
+            cursor: pointer;
+            z-index: 1002;
+        }
+
+        #menuToggle:hover {
+            color: #fff;
         }
 
         #mobileMenu a {
@@ -172,6 +189,14 @@
                 display: none;
             }
 
+            #menuToggle {
+                display: block;
+            }
+
+            #navigation {
+                display: none;
+            }
+
             #mobileMenu {
                 display: block;
             }
@@ -181,6 +206,8 @@
 <body>
 
     <!-- Adicionado menu responsivo para dispositivos móveis -->
+    <div id="menuToggle" onclick="toggleMobileMenu()">☰</div>
+
     <div id="mobileMenu">
         <a href="#">Escolher Capítulo</a>
         <a href="#" onclick="irParaProximoCapitulo()">Próximo Capítulo</a>
@@ -224,12 +251,17 @@
             if (prevScrollpos > currentScrollPos) {
                 document.getElementById("pageHeader").style.top = "0";
             } else {
-                document.getElementById("pageHeader").style.top = "-80px";
+                document.getElementById("pageHeader").style.top = "-80px"; // Altura do cabeçalho + 10px de margem
             }
 
             prevScrollpos = currentScrollPos;
             atualizarBarraProgresso();
         };
+
+        function toggleMobileMenu() {
+            var mobileMenu = document.getElementById("mobileMenu");
+            mobileMenu.style.display = (mobileMenu.style.display === "block") ? "none" : "block";
+        }
 
         function atualizarBarraProgresso() {
             var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
