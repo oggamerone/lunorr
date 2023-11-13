@@ -53,11 +53,26 @@
     <section id="capitulos">
         <h2>Capítulos</h2>
         <ul>
-            <li><a class='chapter' href='/kalli/capitulo1'>Capítulo 1</a></li>
-            <li><a class='chapter' href='/kalli/capitulo2'>Capítulo 2</a></li>
-            <li><a class='chapter' href='/kalli/capitulo3'>Capítulo 3</a></li>
-            <li><a class='chapter' href='/kalli/capitulo12'>Capítulo 12</a></li>
-            <!-- Adicione mais capítulos conforme necessário -->
+          <li><a class='chapter' href='capitulo1.html'>Capítulo 1</a></li>
+          <li><a class='chapter' href='capitulo2.html'>Capítulo 2</a></li>
+          <li><a class='chapter' href='capitulo3.html'>Capítulo 3</a></li>
+          <li><a class='chapter' href='capitulo4.html'>Capítulo 4</a></li>
+          <li><a class='chapter' href='capitulo5.html'>Capítulo 5</a></li>
+          <li><a class='chapter' href='capitulo6.html'>Capítulo 6</a></li>
+          <li><a class='chapter' href='capitulo7.html'>Capítulo 7</a></li>
+          <li><a class='chapter' href='capitulo8.html'>Capítulo 8</a></li>
+          <li><a class='chapter' href='capitulo9.html'>Capítulo 9</a></li>
+          <li><a class='chapter' href='capitulo10.html'>Capítulo 10</a></li>
+          <li><a class='chapter' href='capitulo11.html'>Capítulo 11</a></li>
+          <li><a class='chapter' href='capitulo12.html'>Capítulo 12</a></li>
+          <li><a class='chapter' href='capitulo13.html'>Capítulo 13</a></li>
+          <li><a class='chapter' href='capitulo14.html'>Capítulo 14</a></li>
+          <li><a class='chapter' href='capitulo15.html'>Capítulo 15</a></li>
+          <li><a class='chapter' href='capitulo16.html'>Capítulo 16</a></li>
+          <li><a class='chapter' href='capitulo17.html'>Capítulo 17</a></li>
+          <li><a class='chapter' href='capitulo18.html'>Capítulo 18</a></li>
+          <li><a class='chapter' href='capitulo19.html'>Capítulo 19</a></li>
+          <li><a class='chapter' href='capitulo20.html'>Capítulo 20</a></li>
           </ul>
 
           <div id="disqus_thread"></div>
@@ -67,7 +82,7 @@ const chaptersRead = JSON.parse(localStorage.getItem('chaptersRead')) || [];
 
 // Marca como lido os capítulos salvos no localStorage
 chaptersRead.forEach(chapterNumber => {
-    const chapterLink = document.querySelector(`.chapter[href='/kalli/capitulo${chapterNumber}']`);
+    const chapterLink = document.querySelector(`.chapter[href='capitulo${chapterNumber}.html']`);
     if (chapterLink) {
         chapterLink.classList.add('visited');
     }
@@ -78,7 +93,7 @@ const chapters = document.querySelectorAll('.chapter');
 
 chapters.forEach(chapter => {
     chapter.addEventListener('click', () => {
-        const chapterNumber = parseInt(chapter.textContent.match(/\d+/)[0]); // Extrai o número do capítulo
+        const chapterNumber = parseInt(chapter.textContent.match(/\d+/)[0]);
         chapter.classList.add('visited'); // Adiciona a classe de capítulo lido diretamente ao link
         saveChapterToStorage(chapterNumber); // Salva o capítulo no localStorage
     });
@@ -96,12 +111,13 @@ function saveChapterToStorage(chapterNumber) {
 }
 
 
+
     /**
      *  Certifique-se de substituir 'your_forum_shortname' pelo nome curto do seu fórum Disqus.
      */
      var disqus_config = function () {
         this.page.url = 'https://lunarscan.netlify.app/kalli/kalli';  // URL da sua página
-        this.page.identifier = 'unique_page_id';  // Um identificador exclusivo para a página (pode ser qualquer coisa)
+        this.page.identifier = 'kalli';  // Um identificador exclusivo para a página (pode ser qualquer coisa)
     };
     (function () { // Não altere nada abaixo desta linha
         var d = document, s = d.createElement('script');
