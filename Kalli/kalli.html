@@ -96,24 +96,24 @@ function saveChapterToStorage(chapterNumber) {
 }
 
 
-  /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    /**
+     *  Certifique-se de substituir 'your_forum_shortname' pelo nome curto do seu fórum Disqus.
+     */
+     var disqus_config = function () {
+        this.page.url = 'https://lunarscan.netlify.app/kalli/kalli';  // URL da sua página
+        this.page.identifier = 'unique_page_id';  // Um identificador exclusivo para a página (pode ser qualquer coisa)
     };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://lunarscan.netlify.app/.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
+    (function () { // Não altere nada abaixo desta linha
+        var d = document, s = d.createElement('script');
+        s.src = 'https://lunarscan.disqus.com/embed.js';  // Substitua 'your_forum_shortname'
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
     })();
         </script>
+
     </section>
 
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
 
 
