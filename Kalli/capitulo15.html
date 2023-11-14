@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 1</title>
+    <link rel="stylesheet" type="text/css" href="capitulos.css">
+
+</head>
+<body>
+
+    <header id="pageHeader">
+        <div id="navigation">
+            <label for="chapterSelect">Escolher Capítulo:</label>
+            <select id="chapterSelect" onchange="irParaCapitulo()">
+                <option value="capitulo1.html">Capítulo 1</option>
+                <option value="capitulo2.html">Capítulo 2</option>
+                <option value="capitulo3.html">Capítulo 3</option>
+                <option value="capitulo4.html">Capítulo 4</option>
+                <option value="capitulo5.html">Capítulo 5</option>
+                <option value="capitulo6.html">Capítulo 6</option>
+                <option value="capitulo7.html">Capítulo 7</option>
+                <option value="capitulo8.html">Capítulo 8</option>
+                <option value="capitulo9.html">Capítulo 9</option>
+                <option value="capitulo10.html">Capítulo 10</option>
+                <option value="capitulo11.html">Capítulo 11</option>
+                <option value="capitulo12.html">Capítulo 12</option>
+                <option value="capitulo13.html">Capítulo 13</option>
+                <option value="capitulo14.html">Capítulo 14</option>
+                <option value="capitulo15.html">Capítulo 15</option>
+                <!-- Adicione mais opções conforme necessário -->
+            </select>
+
+            <div id="chapterButtons">
+                <a href="kalli.html" onclick="irParaCapituloAnterior()">Voltar</a>
+                <a href="capitulo2.html" onclick="irParaProximoCapitulo()">Próximo Capítulo</a>
+            </div>
+            
+            <div id="chapterInfo">Capítulo Atual: 15</div>
+        </div>
+    </header>
+
+    <main>
+        <img src="https://i.imgur.com/wvE3yEP.png" alt="1">
+        <img src="https://i.imgur.com/AxLyDUp.png" alt=" 2">
+        <img src="https://i.imgur.com/nVdMURB.png" alt="3">
+        <img src="https://i.imgur.com/r6o3LZF.png" alt="4">
+        <img src="https://i.imgur.com/S86wm4J.png" alt=" 5">
+        <img src="https://i.imgur.com/Fwwxbwg.png" alt=" 6">
+        <img src="https://i.imgur.com/KOk4xq4.png" alt=" 7">
+        <img src="https://i.imgur.com/p0Qw1Jb.png" alt=" 8">
+        <img src="https://i.imgur.com/mycO9rC.png" alt=" 9">
+        <img src="https://i.imgur.com/vAga3rw.png" alt=" 10">
+        <img src="https://i.imgur.com/CA8AZpu.png" alt=" 11">
+        <img src="https://i.imgur.com/lv4eEWK.png" alt=" 12">
+        <img src="https://i.imgur.com/RtuYV3n.png" alt=" 13">
+    </main>
+
+    <div id="progress-bar">
+        <div id="progress"></div>
+    </div>
+
+    <div id="backToManga">
+        <a href="#">Proximo Capítulo</a>
+    </div>
+
+    <div id="menuToggle" onclick="toggleMobileMenu()">☰</div>
+
+    <div id="mobileMenu">
+        <a href="#" onclick="irParaCapituloMobile()">Escolher Capítulo</a>
+        <a href="#" onclick="irParaProximoCapitulo()">Próximo Capítulo</a>
+        <a href="#">Voltar</a>
+        <a href="#" onclick="esconderBarraProgresso()">Esconder Barra de Progresso</a>
+        <a href="#" onclick="reiniciarPagina()">Reiniciar Página</a>
+    </div>
+
+    <script>
+var prevScrollpos = window.pageYOffset;
+
+window.onscroll = function () {
+    var currentScrollPos = window.pageYOffset;
+
+    if (prevScrollpos > currentScrollPos) {
+        document.getElementById("pageHeader").style.top = "0";
+    } else {
+        document.getElementById("pageHeader").style.top = "-80px";
+    }
+
+    prevScrollpos = currentScrollPos;
+    atualizarBarraProgresso();
+};
+
+function toggleMobileMenu() {
+    var mobileMenu = document.getElementById("mobileMenu");
+    mobileMenu.style.display = (mobileMenu.style.display === "block") ? "none" : "block";
+}
+
+function atualizarBarraProgresso() {
+    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrollPercentage = (scrollTop / scrollHeight) * 100;
+    document.getElementById("progress").style.width = scrollPercentage + "%";
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Obtém o número do capítulo a partir do URL, por exemplo, "capitulo2.html" resultaria em 2
+    var currentChapter = parseInt(window.location.pathname.match(/\d+/)[0]);
+
+    // Obtém o elemento do seletor
+    var chapterSelect = document.getElementById("chapterSelect");
+
+    // Itera sobre as opções do seletor para encontrar o capítulo atual
+    for (var i = 0; i < chapterSelect.options.length; i++) {
+        if (chapterSelect.options[i].value.includes("capitulo" + currentChapter)) {
+            chapterSelect.selectedIndex = i;
+            break;
+        }
+    }
+});
+
+function irParaCapitulo() {
+    var selectedChapter = document.getElementById("chapterSelect").value;
+    window.location.href = selectedChapter;
+}
+
+function irParaCapituloAnterior() {
+    // Lógica para ir para o capítulo anterior
+}
+
+function irParaProximoCapitulo() {
+    // Lógica para ir para o próximo capítulo
+}
+
+function irParaCapituloMobile() {
+    var selectedChapter = document.getElementById("chapterSelectMobile").value;
+    window.location.href = selectedChapter;
+}
+
+function esconderBarraProgresso() {
+    document.getElementById("progress-bar").style.display = "none";
+}
+
+function reiniciarPagina() {
+    location.reload();
+}
+
+    </script>
+</body>
+</html>
