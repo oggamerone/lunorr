@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html><html lang="pt-br"><head>
     <!-- Meta Data -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="https://i.imgur.com/aa8Anyi.png">
+    <link rel="shortcut icon" type="image/x-icon" href="">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" href="css/slick.css">
@@ -28,6 +28,10 @@
 </head>
 
 <body class="sticky-header">
+    <!-- Preloader -->
+    <div id="preloader">
+        <img src="" alt="preloader" class="mb-5">
+    </div>
     <!-- Back To Top Start -->
     <a href="#main-wrapper" id="backto-top" class="back-to-top">
         <i class="fas fa-angle-double-up"></i>
@@ -36,28 +40,526 @@
 
     <!-- Main Wrapper Start -->
     <div class="main-wrapper" id="main-wrapper">
-        
         <!--=====================================-->
-        <!--=      coming soon Area Start        =-->
+        <!--=        Header Area Start       	=-->
         <!--=====================================-->
-        <section class="coming-soon sec-pad sec-mar text-center">
-            <div class="container">
-              
-                <div class="coming-soon-block">
-                    <div class="coming-soon-content">
-                        <a href="home.html" class="mb-5"><img src="https://i.imgur.com/vcZKxcr.png" alt=""></a>
-                        <h2>Voltamos em <br> Breve</h2>
-                        <ul class="timer countdown">
-                            <li>1<small>d</small></li>
-                            <li>15<small>h</small></li>
-                            <li>50<small>m</small></li>
-                            <li>34<small>s</small></li>
-                        </ul>
-                        <p>Estamos passando por uma manuntenção, <br>LunarScan<br></p>
+        <header class="header style-3 header-frame">
+            <nav class="side-navbar navbar-expand-lg bg-color-black">
+                <a class="navbar-brand" href="home.html"><img src="" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="mynavbar">
+                    <form action="./list-view.html">
+                        <div class="input-group form-group header-search-box">
+                            <button class="input-group-text anime-btn" type="submit"><i class="fal fa-search"></i></button>
+                            <input class="form-control" type="text" name="query" placeholder="Search">
+                        </div>
+                    </form>
+                    <ul class="navbar-nav mainmenu">
+                        <li class="menu-item-has-children">
+                        </li>
+                        <li class="menu-item-has-children">
+
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="./home-3.html" class="active">Manga</a>
+                        </li>
+                        </li>
+                        <li>
+                            <a href="./signup.html" class="anime-btn btn-dark border-change">SIGN UP</a>
+                        </li>
+                        <li>
+                            <a href="./login.html" class="anime-btn btn-dark">LOG IN</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!--=====================================-->
+        <!--=        Banner Area Start          =-->
+        <!--=====================================-->
+        <section class="banner style-3">
+            <div class="container-fluid">
+                <div class="banner-frame">
+                    <div class=" banner-block bg-color-black">
+                        <div class="row">
+                            <div class="col-lg-5 col-sm-5 col-12 d-flex align-items-center">
+                                <div class="banner-content">
+                                    <h2 class="title">Kalli The Champion</h2>
+                                <p class="text">Capítulo 21</p>
+                                <div class="tag-box">
+                                    <a href="obras/Kalli.html" class="text-box active">Ler</a>
+                                </div>
+                                <p class="light-text">17/11/2023</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-sm-7 col-12 ">
+                            <img src="https://i.imgur.com/tD5NrMo.png" class="dignole-img show-img" alt="">
+                            <img src="images/banner-img-7.png" class="dignole-img hide-img" alt="">
+                        </div>
+                    </div>
+                    </div>
+                    <div class="banner-block bg-color-black">
+                        <div class="row">
+                            <div class="col-lg-7 col-sm-7 col-12">
+                                <img src="https://i.imgur.com/BFOOZv4.png" class="dignole-img show-img" alt="">
+                                <img src="images/banner-img-8.png" class="dignole-img hide-img" alt="">
+                            </div>
+                            <div class="col-lg-5 col-sm-5 col-12 d-flex align-items-center">
+                                <div class="banner-content text-end">
+                                    <h2 class="title">100-nen no oshi</h2>
+                                    <p class="text pe-0">Capítulo 03</p>
+                                    <div class="tag-box">
+                                        <a href="manga-detail.html" class="text-box active ms-2">+18</a>
+                                        <a href="manga-detail.html" class="text-box">Ler</a>
+                                    </div>
+                                    <p class="light-text">30/11/2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner-block bg-color-black mb-0">
+                        <div class="row">
+                            <div class="col-lg-5 col-sm-5 col-12 d-flex align-items-center">
+                                <div class="banner-content">
+                                    <h2 class="title">N/A</h2>
+                                    <p class="text">N/A</p>
+                                    <p class="text">N/A</p>
+                                    <div class="tag-box">
+                                        <a href="manga-detail.html" class="text-box active">N/A</a>
+                                    </div>
+                                    <p class="light-text">N/A</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 col-sm-7 col-12">
+                                <img src="N/A" class="dignole-img show-img" alt="">
+                                <img src="images/banner-img-9.png" class="dignole-img hide-img" alt="">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!--=====================================-->
+        <!--=        Recent Area Start          =-->
+        <!--=====================================-->
+
+
+
+        <section class="recent style-3 sec-mar">
+            <div class="container">
+                <div class="heading style-1">
+                    <h2>Obras Populares<span></span></h2>
+                </div>
+                <div class="row">
+
+
+                    <div class="col-lg-3 col-sm-6 col-12">
+                        <div class="anime-blog">
+                            <a href="./manga-detail.html">
+                                <img src="https://img.lermanga.org/K/kalli-the-champion/capa.jpg" alt="">
+                            </a>
+                            <div class="d-flex justify-content-between">
+                                <p class="text">Capítulo 21</p>
+                                <div class="dropdown">
+                                    <button type="button" class="dropdown-toggle" data-bs-toggle="dropdown">
+                                        <svg width="32" height="22" viewBox="0 0 32 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="0.145264" y="0.00012207" width="21.4395" height="2.68125" rx="1.34062" fill="#999999"></rect>
+                                            <rect x="0.145264" y="7.41272" width="21.4395" height="2.68125" rx="1.34062" fill="#999999"></rect>
+                                            <rect x="0.145264" y="14.8258" width="16.4914" height="2.68125" rx="1.34062" fill="#999999"></rect>
+                                            <path d="M19.8784 16.0712C19.8784 15.4163 20.4093 14.8854 21.0642 14.8854H30.2463C30.9011 14.8854 31.432 15.4163 31.432 16.0712C31.432 16.7261 30.9011 17.257 30.2463 17.257H21.0642C20.4093 17.257 19.8784 16.7261 19.8784 16.0712Z" fill="#999999"></path>
+                                            <path d="M25.6552 22.0001C25.0171 22.0001 24.4999 21.4828 24.4999 20.8447V11.2977C24.4999 10.6596 25.0171 10.1423 25.6552 10.1423C26.2933 10.1423 26.8106 10.6596 26.8106 11.2977V20.8447C26.8106 21.4828 26.2933 22.0001 25.6552 22.0001Z" fill="#999999"></path>
+                                        </svg>
+                                    </button>
+                                    <ul class="dropdown-menu bg-color-black pt-3 pb-3 ps-3 pe-3">
+                                        <li>
+                                            <a href="./manga-detail.html" class="none"><i class="fa fa-check"></i>Ler Agora</a>
+                                        </li>
+                                        <li>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="./manga-detail.html">
+                                <p>Kalli The Champion</p>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-3 col-sm-6 col-12">
+                        <div class="anime-blog">
+                            <a href="./manga-detail.html">
+                                <img src="https://img.lermanga.org/0/100-nen-no-oshi/capa.jpg" alt="">
+                            </a>
+                            <div class="d-flex justify-content-between">
+                                <p class="text">Capítulo 03</p>
+                                <div class="dropdown">
+                                    <button type="button" class="dropdown-toggle" data-bs-toggle="dropdown">
+                                        <svg width="32" height="22" viewBox="0 0 32 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="0.145264" y="0.00012207" width="21.4395" height="2.68125" rx="1.34062" fill="#999999"></rect>
+                                            <rect x="0.145264" y="7.41272" width="21.4395" height="2.68125" rx="1.34062" fill="#999999"></rect>
+                                            <rect x="0.145264" y="14.8258" width="16.4914" height="2.68125" rx="1.34062" fill="#999999"></rect>
+                                            <path d="M19.8784 16.0712C19.8784 15.4163 20.4093 14.8854 21.0642 14.8854H30.2463C30.9011 14.8854 31.432 15.4163 31.432 16.0712C31.432 16.7261 30.9011 17.257 30.2463 17.257H21.0642C20.4093 17.257 19.8784 16.7261 19.8784 16.0712Z" fill="#999999"></path>
+                                            <path d="M25.6552 22.0001C25.0171 22.0001 24.4999 21.4828 24.4999 20.8447V11.2977C24.4999 10.6596 25.0171 10.1423 25.6552 10.1423C26.2933 10.1423 26.8106 10.6596 26.8106 11.2977V20.8447C26.8106 21.4828 26.2933 22.0001 25.6552 22.0001Z" fill="#999999"></path>
+                                        </svg>
+                                    </button>
+                                    <ul class="dropdown-menu bg-color-black pt-3 pb-3 ps-3 pe-3">
+                                        <li>
+                                            <a href="./manga-detail.html" class="none"><i class="fa fa-check"></i>Ler agora</a>
+                                        </li>
+                                        <li>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="./manga-detail.html">
+                                <p>100-nen no oshi</p>
+                            </a>
+                        </div>
+                    </div>        
+                </section>
+        <!--=====================================-->
+        <!--=        Coming out Area Start     =-->
+        <!--=====================================-->
+        <!--=====================================-->
+        <!--=        Popular Anime Area Start =-->
+        <!--=====================================-->
+        <section class="popular style-3  sec-mar">
+            <div class="container">
+                <div class="heading style-1">
+                    <h2>Upados Recentemente</h2>
+                </div>
+              <div class="row">
+                    <div class="col-lg-3 col-sm-6 col-12">
+                        <div class="anime-blog">
+                            <a href="./manga-detail.html">
+                                <img src="https://img.lermanga.org/K/kalli-the-champion/capa.jpg" alt="">
+                            </a>
+                            <div class="d-flex justify-content-between">
+                                <p class="text">Capítulo 22</p>
+                                <div class="dropdown">
+                                    <button type="button" class="dropdown-toggle" data-bs-toggle="dropdown">
+                                        <svg width="32" height="22" viewBox="0 0 32 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="0.145264" y="0.00012207" width="21.4395" height="2.68125" rx="1.34062" fill="#999999"></rect>
+                                            <rect x="0.145264" y="7.41272" width="21.4395" height="2.68125" rx="1.34062" fill="#999999"></rect>
+                                            <rect x="0.145264" y="14.8258" width="16.4914" height="2.68125" rx="1.34062" fill="#999999"></rect>
+                                            <path d="M19.8784 16.0712C19.8784 15.4163 20.4093 14.8854 21.0642 14.8854H30.2463C30.9011 14.8854 31.432 15.4163 31.432 16.0712C31.432 16.7261 30.9011 17.257 30.2463 17.257H21.0642C20.4093 17.257 19.8784 16.7261 19.8784 16.0712Z" fill="#999999"></path>
+                                            <path d="M25.6552 22.0001C25.0171 22.0001 24.4999 21.4828 24.4999 20.8447V11.2977C24.4999 10.6596 25.0171 10.1423 25.6552 10.1423C26.2933 10.1423 26.8106 10.6596 26.8106 11.2977V20.8447C26.8106 21.4828 26.2933 22.0001 25.6552 22.0001Z" fill="#999999"></path>
+                                        </svg>
+                                    </button>
+                                    <ul class="dropdown-menu bg-color-black pt-3 pb-3 ps-3 pe-3">
+                                        <li>
+                                            <a href="./manga-detail.html" class="none"><i class="fa fa-check"></i> Ler Agora</a>
+                                        </li>
+                                        <li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="./manga-detail.html">
+                                <p>Kalli the champion</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6 col-12">
+                        <div class="anime-blog">
+                            <a href="./manga-detail.html">
+                                <img src="https://img.lermanga.org/0/100-nen-no-oshi/capa.jpg" alt="">
+                            </a>
+                            <div class="d-flex justify-content-between">
+                                <p class="text">Capítulo 03</p>
+                                <div class="dropdown">
+                                    <button type="button" class="dropdown-toggle" data-bs-toggle="dropdown">
+                                        <svg width="32" height="22" viewBox="0 0 32 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="0.145264" y="0.00012207" width="21.4395" height="2.68125" rx="1.34062" fill="#999999"></rect>
+                                            <rect x="0.145264" y="7.41272" width="21.4395" height="2.68125" rx="1.34062" fill="#999999"></rect>
+                                            <rect x="0.145264" y="14.8258" width="16.4914" height="2.68125" rx="1.34062" fill="#999999"></rect>
+                                            <path d="M19.8784 16.0712C19.8784 15.4163 20.4093 14.8854 21.0642 14.8854H30.2463C30.9011 14.8854 31.432 15.4163 31.432 16.0712C31.432 16.7261 30.9011 17.257 30.2463 17.257H21.0642C20.4093 17.257 19.8784 16.7261 19.8784 16.0712Z" fill="#999999"></path>
+                                            <path d="M25.6552 22.0001C25.0171 22.0001 24.4999 21.4828 24.4999 20.8447V11.2977C24.4999 10.6596 25.0171 10.1423 25.6552 10.1423C26.2933 10.1423 26.8106 10.6596 26.8106 11.2977V20.8447C26.8106 21.4828 26.2933 22.0001 25.6552 22.0001Z" fill="#999999"></path>
+                                        </svg>
+                                    </button>
+                                    <ul class="dropdown-menu bg-color-black pt-3 pb-3 ps-3 pe-3">
+                                        <li>
+                                            <a href="./manga-detail.html" class="none"><i class="fa fa-check"></i>Ler Agora</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="./manga-detail.html">
+                                <p>100-nen no oshi</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--=====================================-->
+        <!--=        Schedule Area Start        =-->
+        <!--=====================================-->
+        <!--=====================================-->
+        <!--=           top Area Start          =-->
+        <!--=====================================-->
+        <section class="top sec-mar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-8 offset-lg-0 offset-md-0 offset-sm-2 col-12">
+                        <h3>Novo</h3>
+                        <div class="anime-box style-2 bg-color-black">
+                            <a href="C:\Users\Almeida\Desktop\lunarscanmangá/manga-detail.html">
+
+                                <div class="row m-0">
+                                    <div class="p-0 col-4">
+                                        <img src="images/manga-img-7_1.pnN" alt="">
+                                    </div>
+                                    <div class="p-0 col-8">
+                                        <div class="anime-blog">
+                                            <p>NA</p>
+                                            <p class="text">NA</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </a>
+                        </div>
+                        <div class="anime-box style-2 bg-color-black">
+                            <a href="./manga-detail.html">
+
+                                <div class="row m-0">
+                                    <div class="p-0 col-4">
+                                        <img src="images/manga-img-8.pn" alt="">
+                                    </div>
+                                    <div class="p-0 col-8">
+                                        <div class="anime-blog">
+                                            <p>NA</p>
+                                            <p class="text">NA</p>
+                                            <p class="ms-2 me-0 text-box active">NA</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </a>
+                        </div>
+                        <div class="anime-box style-2 bg-color-black">
+                            <a href="./manga-detail.html">
+
+                                <div class="row m-0">
+                                    <div class="p-0 col-4">
+                                        <img src="images/manga-img-9.pn" alt="">
+                                    </div>
+                                    <div class="p-0 col-8">
+                                        <div class="anime-blog">
+                                            <p>NA</p>
+                                            <p class="text">NA</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </a>
+                        </div>
+                        <div class="anime-box style-2 bg-color-black">
+                            <a href="./manga-detail.html">
+
+                                <div class="row m-0">
+                                    <div class="p-0 col-4">
+                                        <img src="images/manga-img-10.pn" alt="">
+                                    </div>
+                                    <div class="p-0 col-8">
+                                        <div class="anime-blog">
+                                            <p>NA</p>
+                                            <p class="text">NA</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </a>
+                        </div>
+                        <div class="anime-box style-2 bg-color-black">
+                            <a href="./manga-detail.html">
+
+                                <div class="row m-0">
+                                    <div class="p-0 col-4">
+                                        <img src="images/manga-img-11_1.pn" alt="">
+                                    </div>
+                                    <div class="p-0 col-8">
+                                        <div class="anime-blog">
+                                            <p>NA</p>
+                                            <p class="text">NA</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </a>
+                        </div>
+                        <div class="anime-box style-2 bg-color-black">
+                            <a href="./manga-detail.html">
+
+                                <div class="row m-0">
+                                    <div class="p-0 col-4">
+                                        <img src="images/manga-img-12_1.pn" alt="">
+                                    </div>
+                                    <div class="p-0 col-8">
+                                        <div class="anime-blog">
+                                            <p>NA</p>
+                                            <p class="text">NA</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-8 offset-lg-0 offset-md-3 offset-sm-2 col-12">
+                        <h3>Obras mais lidas</h3>
+
+
+                        <div class="anime-box style-2 bg-color-black">
+                            <a href="./manga-detail.html">
+                                <div class="row m-0">
+                                    <div class="p-0 col-4">
+                                        <img src="https://img.lermanga.org/K/kalli-the-champion/capa.jpg" alt="">
+                                    </div>
+                                    <div class="p-0 col-8">
+                                        <div class="anime-blog">
+                                            <p>Kalli the champion</p>
+                                            <p class="text">Capitulo 21</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </a>
+                        </div>
+                        <div class="anime-box style-2 bg-color-black">
+                            <a href="./manga-detail.html">
+
+                                <div class="row m-0">
+                                    <div class="p-0 col-4">
+                                        <img src="https://img.lermanga.org/0/100-nen-no-oshi/capa.jpg" alt="">
+                                    </div>
+                                    <div class="p-0 col-8">
+                                        <div class="anime-blog">
+                                            <p>100-nen no oshi</p>
+                                            <p class="text">Capitulo 03</p>
+                                            <p class="ms-2 me-0 text-box active">18+</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="anime-box style-2 bg-color-black">
+                            <a href="./manga-detail.html">
+                                <div class="row m-0">
+                                    <div class="p-0 col-4">
+                                        <img src="images/manga-img-9.pn" alt="">
+                                    </div>
+                                    <div class="p-0 col-8">
+                                        <div class="anime-blog">
+                                            <p>NA</p>
+                                            <p class="text">NA</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </a>
+                        </div>
+                        <div class="anime-box style-2 bg-color-black">
+                            <a href="./manga-detail.html">
+
+                                <div class="row m-0">
+                                    <div class="p-0 col-4">
+                                        <img src="images/manga-img-10.pn" alt="">
+                                    </div>
+                                    <div class="p-0 col-8">
+                                        <div class="anime-blog">
+                                            <p>NA</p>
+                                            <p class="text">NA</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </a>
+                        </div>
+                        <div class="anime-box style-2 bg-color-black">
+                            <a href="./manga-detail.html">
+
+                                <div class="row m-0">
+                                    <div class="p-0 col-4">
+                                        <img src="images/manga-img-11_1.pn" alt="">
+                                    </div>
+                                    <div class="p-0 col-8">
+                                        <div class="anime-blog">
+                                            <p>NA</p>
+                                            <p class="text">NA</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </a>
+                        </div>
+                        <div class="anime-box style-2 bg-color-black">
+                            <a href="./manga-detail.html">
+
+                                <div class="row m-0">
+                                    <div class="p-0 col-4">
+                                        <img src="images/manga-img-12_1.pn" alt="">
+                                    </div>
+                                    <div class="p-0 col-8">
+                                        <div class="anime-blog">
+                                            <p>One Piece</p>
+                                            <p class="text">NA</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--=====================================-->
+        <!--=           Blog Area Start         =-->
+        <!--=====================================-->
+        <!--=====================================-->
+        <!--=           Footer Area Start       =-->
+        <!--=====================================-->
+        <footer class="footer">
+            <div class="footer-main style-1">
+                <div class="container">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="col-lg-5 col-sm-12 col-12">
+                            <div class="footer-widget">
+                                <a href="./home.html"><img alt="" src="https://i.imgur.com/vcZKxcr.png"></a>
+                                <p class="mt-2 mb-5">LunarScan, tradutora de manhwa/mangá, não oficial, feita de fãs para fãs.</p>
+                                <h6 class="mb-2">Entrando aqui você nos ajuda a continuar;</h6>
+                                <ul class="social-icons">
+                                    <li><a href="https://discord.gg/HnG7738gjg"><img alt="Discord da scan." src="images/discord.png"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-sm-12 col-12">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom bg-color-black">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-12">
+                            <div class="footer-copyright">
+                                <span class="copyright-text">© 2023. Todos os direitos reservados. <a href="#">LunarScan</a>.</span>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
     </div>
     <!-- Jquery Js -->
     <script src="js/jquery-3.6.0.min.js"></script>
