@@ -1149,7 +1149,7 @@ ul.pagination li a.current {
 }
 .header nav .navbar-brand {
   padding: 0;
-  width: 150px;
+  width: 200px;
 }
 
 .header nav i {
@@ -5338,21 +5338,4 @@ input:focus,
     font-size: 24px;
     line-height: 28px;
   }
-}
-.custom-badge {
-  background-color: #e74c3c; /* Vermelho */
-  color: #fff; /* Texto branco para contrastar */
-  font-weight: bold;
-  padding: 5px 10px;
-  border-radius: 5px;
-  text-decoration: none; /* Remover sublinhado padrão */
-}
-
-.custom-badge-new {
-  background-color: #3498db; /* Azul */
-  color: #fff; /* Texto branco para contrastar */
-  font-weight: bold;
-  padding: 5px 10px;
-  border-radius: 5px;
-  text-decoration: none; /* Remover sublinhado padrão */
 }
