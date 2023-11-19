@@ -113,8 +113,7 @@ function irParaCapitulo() {
     // Redirecionar para o capítulo selecionado
     window.location.href = selectedValue;
 }
-<script>
+
   if (window.location.pathname.endsWith('.html')) {
     window.history.replaceState({}, document.title, window.location.pathname.slice(0, -5));
   }
-</script>
