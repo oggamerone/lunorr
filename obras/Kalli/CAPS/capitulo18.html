@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAPÍTULO 18 DE KALLI THE CHAMPION</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1f1f1f;
+            color: #fff;
+        }
+
+        header {
+            background-color: #111;
+            padding: 15px 20px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: top 0.3s ease;
+        }
+
+        header a {
+            color: #4caf50;
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        header a:hover {
+            color: #fff;
+        }
+
+        main {
+            padding: 80px 20px 20px;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1px;
+        }
+
+        img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        #progress-bar {
+            background-color: #333;
+            height: 10px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+        }
+
+        #progress {
+            background-color: #4caf50;
+            height: 100%;
+            width: 0;
+            transition: width 0.3s ease;
+        }
+
+        #navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        #chapterInfo {
+            font-size: 16px;
+            color: #4caf50;
+            margin-right: 20px;
+        }
+
+        #chapterSelect {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+            margin-top: 10px;
+        }
+
+        #chapterSelect:focus {
+            outline: none;
+            border: 1px solid #4caf50;
+        }
+
+        #chapterButtons a {
+            padding: 15px 30px;
+            background-color: #4caf50;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        #chapterButtons a:hover {
+            background-color: #333;
+        }
+
+        #backToManga {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #backToManga a {
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        #backToManga a:hover {
+            background-color: #333;
+        }
+
+        #nextChapter {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        #nextChapter a {
+            padding: 15px 30px;
+            background-color: #4caf50;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        #nextChapter a:hover {
+            background-color: #333;
+        }
+
+        #menuToggle {
+            display: none;
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            font-size: 25px;
+            color: #4caf50;
+            cursor: pointer;
+            z-index: 1002;
+        }
+
+        #menuToggle:hover {
+            color: #fff;
+        }
+
+        #mobileMenu {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: #111;
+            padding: 0 20px 20px;
+            z-index: 1001;
+            border-radius: 0 0 0 10px;
+            box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #mobileMenu a {
+            display: block;
+            color: #4caf50;
+            margin-bottom: 10px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            border-bottom: 1px solid #4caf50;
+            padding-bottom: 5px;
+        }
+
+        #mobileMenu a:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        #mobileMenu a:hover {
+            color: #fff;
+        }
+
+        @media screen and (max-width: 600px) {
+            #navigation {
+                display: none;
+            }
+
+            #menuToggle {
+                display: block;
+            }
+
+            main {
+                padding-top: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="pageHeader">
+        <div id="navigation">
+            <label for="chapterSelect">Escolher Capítulo:</label>
+            <select id="chapterSelect" onchange="irParaCapitulo()">
+                <!-- JavaScript irá gerar as opções aqui -->
+            </select>
+        </div>
+    </header>
+    
+            </select>
+
+            <div id="chapterButtons">
+                <a href="../Kalli.html" onclick="irParaCapituloAnterior()">Voltar</a>
+                <a href="capitulo2.html" onclick="irParaProximoCapitulo()">Próximo Capítulo</a>
+            </div>
+            
+            <div id="chapterInfo">Capítulo Atual: 18</div>
+        </div>
+    </header>
+
+    <main>
+
+    </body>
+
+    </main>
+
+    <div id="progress-bar">
+        <div id="progress"></div>
+    </div>
+
+    <div id="backToManga">
+        <a id="proximaPagina" href="#">Proximo Capítulo</a>
+    </div>
+
+    <div id="menuToggle" onclick="toggleMobileMenu()">☰</div>
+
+    <div id="mobileMenu">
+        <a href="#" onclick="irParaCapituloMobile()">Escolher Capítulo</a>
+        <a href="#" onclick="irParaProximoCapitulo()">Próximo Capítulo</a>
+        <a href="#">Voltar</a>
+        <a href="#" onclick="esconderBarraProgresso()">Esconder Barra de Progresso</a>
+        <a href="#" onclick="reiniciarPagina()">Reiniciar Página</a>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
